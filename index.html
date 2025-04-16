@@ -52,6 +52,13 @@
       border-radius: 8px;
       margin-top: 10px;
     }
+    .icono-contacto {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
   </style>
 </head>
 <body>
@@ -102,13 +109,33 @@
     </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Consultas, presupuestos y más:</p>
-    <p>Email: <a href="mailto:andressanchezize@gmail.com">andressanchezize@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/543878541341">+54 3878541341</a></p>
-    <p>GitHub: <a href="https://github.com/Andressan212" target="_blank">github.com/Andres Sanchez</a></p>
-  </section>
+ <section id="contacto">
+  <h2>Contacto</h2>
+  <p>Consultas, presupuestos y más:</p>
+ <p>
+  <img src="img/gmailjpg.jpg" alt="Email" class="icono-contacto">
+  Email: <a href="mailto:andressanchezize@gmail.com">andressanchezize@gmail.com</a>
+</p>
+
+<p>
+  <img src="img/WhatsApp.png" alt="WhatsApp" class="icono-contacto">
+  WhatsApp: <a href="https://wa.me/543878541341">+54 3878541341</a>
+</p>
+
+<p>
+  <img src="img/githubpng.png" alt="GitHub" class="icono-contacto">
+  GitHub: <a href="https://github.com/Andressan212" target="_blank">github.com/Andres Sanchez</a>
+</p>
+
+  <div class="control-img">
+    <label>Ancho:</label>
+    <input type="number" id="anchoContacto" value="400">
+    <label>Alto:</label>
+    <input type="number" id="altoContacto" value="250">
+    <button onclick="cambiarTamaño('imgContacto', document.getElementById('anchoContacto').value, document.getElementById('altoContacto').value)">Aplicar</button>
+  </div>
+</section>
+
 
   <footer>
     <p>&copy; 2025 Servicios Informáticos - Todos los derechos reservados</p>
