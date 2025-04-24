@@ -7,65 +7,121 @@
   <title>Servicios Informáticos</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f0f4f8;
       color: #333;
     }
+
     header {
-      background-color: #0d47a1;
+      background: linear-gradient(to right, #0d47a1, #1976d2);
       color: white;
-      padding: 30px 20px;
-      text-align: center;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
+
+    header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      width: 100%;
+      text-align: center;
+      margin-top: 5px;
+      font-size: 1rem;
+      color: #cfe2f3;
+    }
+
     nav {
       background-color: #1565c0;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
     }
+
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s, background-color 0.3s;
+      padding: 8px 14px;
+      border-radius: 6px;
     }
+
+    nav a:hover {
+      background-color: white;
+      color: #1565c0;
+    }
+
     section {
-      padding: 30px 20px;
+      padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
     }
+
+    section h2 {
+      color: #0d47a1;
+      border-bottom: 2px solid #1976d2;
+      padding-bottom: 8px;
+    }
+
     .servicio, .proyecto {
       background: white;
       margin: 20px 0;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
     }
+
+    .servicio:hover, .proyecto:hover {
+      transform: scale(1.02);
+    }
+
     footer {
       background-color: #0d47a1;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
     }
+
     img {
       max-width: 100%;
       border-radius: 8px;
       margin-top: 10px;
     }
-    .icono-contacto {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
 
+    .icono-contacto {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>A.R.S.F Servicios Informáticos</h1>
-    <p>Desarrollo de sistemas a medida y soporte técnico profesional para PC</p>
+    <img src="img/LOGO1.webp" alt="Logo ARSF">
+    <div>
+      <h1>A.R.S.F Servicios Informáticos</h1>
+      <p>Desarrollo de sistemas a medida y soporte técnico profesional para PC</p>
+    </div>
   </header>
 
   <nav>
@@ -88,8 +144,8 @@
       <img src="img/img2.png" alt="Sistema de Ventas">
     </div>
     <div class="proyecto">
-      <h3>registrar empleado</h3>
-      <p>sistema de registrar empleados. php y mysql.</p>
+      <h3>Registrar Empleado</h3>
+      <p>Sistema de registrar empleados. PHP y MySQL.</p>
       <img src="img/img1.png" alt="Turnero Web">
     </div>
   </section>
@@ -110,25 +166,22 @@
     </div>
   </section>
 
- <section id="contacto">
-  <h2>Contacto</h2>
-  <p>Consultas, presupuestos y más:</p>
- <p>
-  <img src="img/gmailjpg.jpg" alt="Email" class="icono-contacto">
-  <!--Email:--> <a href="mailto:andressanchezize@gmail.com">andressanchezize@gmail.com</a>
-</p>
-
-<p>
-  <img src="img/WhatsApp_icon.png" alt="WhatsApp" class="icono-contacto">
-  <!--WhatsApp:--> <a href="https://wa.me/543878541341">+54 3878541341</a>
-</p>
-
-<p>
-  <img src="img/githubpng.png" alt="GitHub" class="icono-contacto">
-  <!--GitHub:--> <a href="https://github.com/Andressan212" target="_blank">github.com/Andres Sanchez</a>
-</p>
-</section>
-
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Consultas, presupuestos y más:</p>
+    <p>
+      <img src="img/gmailjpg.jpg" alt="Email" class="icono-contacto">
+      <a href="mailto:andressanchezize@gmail.com">andressanchezize@gmail.com</a>
+    </p>
+    <p>
+      <img src="img/WhatsApp_icon.png" alt="WhatsApp" class="icono-contacto">
+      <a href="https://wa.me/543878541341">+54 3878541341</a>
+    </p>
+    <p>
+      <img src="img/githubpng.png" alt="GitHub" class="icono-contacto">
+      <a href="https://github.com/Andressan212" target="_blank">github.com/Andres Sanchez</a>
+    </p>
+  </section>
 
   <footer>
     <p>&copy; 2025 Servicios Informáticos - Todos los derechos reservados</p>
