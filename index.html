@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="img/LOGO1.webp">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="img/LOGO1.webp" />
   <title>Servicios Informáticos</title>
   <style>
     body {
@@ -113,9 +113,29 @@
     html {
       scroll-behavior: smooth;
     }
+
+    #btnArriba {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #1976d2;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 16px;
+    }
+
+    #btnArriba:hover {
+      background-color: #0d47a1;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <img src="img/LOGO1.webp" alt="Logo ARSF">
     <div>
@@ -186,5 +206,27 @@
   <footer>
     <p>&copy; 2025 Servicios Informáticos - Todos los derechos reservados</p>
   </footer>
+
+  <button id="btnArriba">↑ Arriba</button>
+
+  <script>
+    // Mostrar botón al hacer scroll
+    const btnArriba = document.getElementById("btnArriba");
+    window.addEventListener("scroll", () => {
+      btnArriba.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    btnArriba.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Mensaje de bienvenida (una sola vez)
+    if (!sessionStorage.getItem("bienvenido")) {
+      alert("¡Bienvenido a A.R.S.F Servicios Informáticos!");
+      sessionStorage.setItem("bienvenido", "true");
+    }
+  </script>
+
 </body>
 </html>
+
