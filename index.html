@@ -6,13 +6,12 @@
   <title>Servicios Informáticos</title>
   <link rel="icon" href="img/LOGO1.webp" type="image/webp">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="description" content="Servicios informáticos: reparación de PC, desarrollo de sistemas, soporte técnico personalizado. Soluciones tecnológicas para empresas y particulares.">
+<meta name="keywords" content="Reparación de PC, desarrollo de sistemas, soporte técnico, sistemas informáticos, ARSF, informática Salta">
+<meta name="author" content="Andrés Sánchez">
 
+  <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f4f6fc;
@@ -23,7 +22,7 @@
     header {
       background: linear-gradient(135deg, #0d47a1, #42a5f5);
       color: #fff;
-      padding: 40px 20px;
+      padding: 50px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -39,7 +38,8 @@
     }
 
     header h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
+      margin-bottom: 0;
     }
 
     nav {
@@ -61,30 +61,30 @@
     }
 
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
     h2 {
       color: #0d47a1;
-      font-size: 1.6rem;
-      margin-bottom: 16px;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
       border-bottom: 2px solid #0d47a1;
       display: inline-block;
     }
 
-    .servicio, .proyecto {
+    .card-custom {
       background: #fff;
       border-radius: 16px;
       padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .servicio:hover, .proyecto:hover {
+    .card-custom:hover {
       transform: scale(1.02);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
     }
 
     .proyecto img {
@@ -183,36 +183,45 @@
 
   <section id="sistemas">
     <h2>Sistemas Desarrollados</h2>
-
-    <div class="proyecto">
-      <h3>Sistema de Gestión de Ventas</h3>
-      <p>Gestión de productos, clientes y ventas. Desarrollado en Visual Basic y MySQL.</p>
-      <img src="img/img2.png" alt="Sistema de Ventas">
-    </div>
-
-    <div class="proyecto">
-      <h3>Registro de Empleados</h3>
-      <p>Registro de personal con base de datos. Desarrollado con PHP y MySQL.</p>
-      <img src="img/img1.png" alt="Sistema Empleados">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h3>Sistema de Gestión de Ventas</h3>
+          <p>Gestión de productos, clientes y ventas. Desarrollado en Visual Basic y MySQL.</p>
+          <img src="img/img2.png" alt="Sistema de Ventas">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-custom">
+          <h3>Registro de Empleados</h3>
+          <p>Registro de personal con base de datos. Desarrollado con PHP y MySQL.</p>
+          <img src="img/img1.png" alt="Sistema Empleados">
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="servicios">
     <h2>Servicios Técnicos</h2>
-
-    <div class="servicio">
-      <h3>Formateo y Reinstalación</h3>
-      <p>Incluye backup, instalación de Windows, drivers y software esencial.</p>
-    </div>
-
-    <div class="servicio">
-      <h3>Mantenimiento Preventivo</h3>
-      <p>Limpieza interna, optimización del sistema y eliminación de malware.</p>
-    </div>
-
-    <div class="servicio">
-      <h3>Reparaciones</h3>
-      <p>Cambio de discos, memorias, fuentes, pantallas y otros componentes.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h4>Formateo y Reinstalación</h4>
+          <p>Incluye backup, instalación de Windows, drivers y software esencial.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h4>Mantenimiento Preventivo</h4>
+          <p>Limpieza interna, optimización del sistema y eliminación de malware.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-custom text-center">
+          <h4>Reparaciones</h4>
+          <p>Cambio de discos, memorias, fuentes, pantallas y otros componentes.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -252,5 +261,7 @@
       }, 2000);
     }
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
