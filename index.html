@@ -21,6 +21,9 @@
 <!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+<!-- ICONOS MODERNOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 <style>
 :root{
   --blue:#0d47a1;
@@ -43,33 +46,27 @@ header{
   background:linear-gradient(135deg,var(--blue),var(--blue2));
   color:white;
   text-align:center;
-  padding:80px 20px 70px;
+  padding:90px 20px 80px;
 }
 header img{
-  width:85px;
-  border-radius:14px;
+  width:90px;
+  border-radius:16px;
   margin-bottom:14px;
-}
-header h1{
-  font-weight:700;
-}
-header p{
-  opacity:.95;
 }
 
 /* NAV */
 nav{
-  background:rgba(13,71,161,.95);
-  backdrop-filter: blur(8px);
+  background:rgba(13,71,161,.96);
+  backdrop-filter: blur(10px);
   position:sticky;
   top:0;
   z-index:999;
   text-align:center;
-  padding:12px;
+  padding:14px;
 }
 nav a{
   color:white;
-  margin:0 16px;
+  margin:0 18px;
   font-weight:600;
   text-decoration:none;
   transition:.3s;
@@ -82,79 +79,85 @@ nav a:hover{
 h2{
   color:var(--blue);
   font-weight:700;
-  margin-bottom:30px;
+  margin-bottom:35px;
   position:relative;
 }
 h2::after{
   content:"";
-  width:60px;
+  width:70px;
   height:4px;
   background:var(--blue);
   display:block;
-  margin-top:8px;
+  margin-top:10px;
   border-radius:10px;
 }
 
 /* CARDS */
 .card-box{
   background:var(--card);
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
   transition:.35s ease;
   overflow:hidden;
 }
 .card-box:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 45px rgba(0,0,0,.15);
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
 }
 
 /* SISTEMAS */
 .system-img{
-  height:170px;
+  height:175px;
   background:#f2f5fb;
   display:flex;
   align-items:center;
   justify-content:center;
 }
 .system-img img{
-  width:90%;
-  height:90%;
+  width:88%;
+  height:88%;
   object-fit:contain;
-  transition:.4s ease;
+  transition:.45s ease;
 }
 .card-box:hover .system-img img{
-  transform:scale(1.06);
+  transform:scale(1.08);
 }
 .system-content{
-  padding:20px;
+  padding:22px;
 }
 
 /* SERVICIOS */
 .service-box{
   text-align:center;
-  padding:30px 22px;
+  padding:32px 25px;
+}
+.service-box i{
+  font-size:36px;
+  color:var(--blue);
+  margin-bottom:12px;
 }
 
 /* CONTACTO */
 #contacto{
   background:#eaf1ff;
-  border-radius:25px;
-  padding:45px 25px;
+  border-radius:28px;
+  padding:50px 30px;
 }
 .contact-item{
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:12px;
-  border-radius:12px;
+  gap:14px;
+  padding:14px;
+  border-radius:14px;
   cursor:pointer;
   transition:.3s;
 }
 .contact-item:hover{
   background:#dde8ff;
 }
-.contact-item img{
-  width:26px;
+.contact-item i{
+  font-size:22px;
+  color:var(--blue);
 }
 .contact-item a{
   text-decoration:none;
@@ -165,14 +168,14 @@ h2::after{
 /* MENSAJE */
 .mensaje-flotante{
   position:fixed;
-  bottom:90px;
-  right:26px;
+  bottom:95px;
+  right:28px;
   background:var(--blue);
   color:white;
-  padding:12px 18px;
-  border-radius:12px;
+  padding:12px 20px;
+  border-radius:14px;
   display:none;
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 /* FOOTER */
@@ -180,24 +183,25 @@ footer{
   background:var(--blue);
   color:white;
   text-align:center;
-  padding:22px;
+  padding:24px;
   margin-top:40px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .whatsapp-float{
   position:fixed;
   bottom:22px;
   right:22px;
-  width:50px;
-  height:50px;
+  width:52px;
+  height:52px;
   background:#25D366;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:24px;
-  box-shadow:0 10px 25px rgba(0,0,0,.3);
+  font-size:26px;
+  color:white;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
   z-index:999;
   transition:.3s;
   text-decoration:none;
@@ -212,7 +216,7 @@ footer{
   .whatsapp-float{
     width:44px;
     height:44px;
-    font-size:20px;
+    font-size:22px;
     bottom:16px;
     right:16px;
   }
@@ -260,7 +264,7 @@ footer{
           <img src="img/img2.png" alt="Sistema de Gestión de Ventas">
         </div>
         <div class="system-content">
-          <h5>Sistema de Gestión de Ventas</h5>
+          <h5><i class="fa-solid fa-cash-register"></i> Sistema de Gestión de Ventas</h5>
           <p>Gestión de productos, clientes y ventas. Visual Basic + MySQL.</p>
         </div>
       </div>
@@ -272,7 +276,7 @@ footer{
           <img src="img/img1.png" alt="Gestión de Personal">
         </div>
         <div class="system-content">
-          <h5>Gestión de Personal</h5>
+          <h5><i class="fa-solid fa-users-gear"></i> Gestión de Personal</h5>
           <p>Empleados, sectores, reportes y administración interna. PHP + MySQL.</p>
         </div>
       </div>
@@ -287,6 +291,7 @@ footer{
 
     <div class="col-md-4">
       <div class="card-box service-box">
+        <i class="fa-solid fa-desktop"></i>
         <h5>Formateo Profesional</h5>
         <p>Backup, Windows, drivers y software esencial.</p>
       </div>
@@ -294,6 +299,7 @@ footer{
 
     <div class="col-md-4">
       <div class="card-box service-box">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
         <h5>Mantenimiento</h5>
         <p>Limpieza interna, optimización y seguridad.</p>
       </div>
@@ -301,6 +307,7 @@ footer{
 
     <div class="col-md-4">
       <div class="card-box service-box">
+        <i class="fa-solid fa-microchip"></i>
         <h5>Reparaciones</h5>
         <p>Hardware, discos, memorias, fuentes, pantallas.</p>
       </div>
@@ -313,17 +320,17 @@ footer{
   <h2>Contacto</h2>
 
   <div class="contact-item" onclick="mostrarMensaje('Enviando correo...')">
-    <img src="img/gmailjpg.jpg">
+    <i class="fa-solid fa-envelope"></i>
     <a href="mailto:andressanchezize@gmail.com">andressanchezize@gmail.com</a>
   </div>
 
-  <div class="contact-item" onclick="mostrarMensaje('Abriendo WhatsApp...')">
-    <img src="img/WhatsApp_icon.png">
+ <!-- <div class="contact-item" onclick="mostrarMensaje('Abriendo WhatsApp...')">
+    <i class="fa-brands fa-whatsapp"></i>
     <a href="https://wa.me/543878541341" target="_blank">+54 3878541341</a>
-  </div>
+  </div>-->
 
   <div class="contact-item" onclick="mostrarMensaje('Abriendo GitHub...')">
-    <img src="img/githubpng.png">
+    <i class="fa-brands fa-github"></i>
     <a href="https://github.com/Andressan212" target="_blank">github.com/Andressan212</a>
   </div>
 
@@ -336,8 +343,10 @@ footer{
   <p>© 2025 A.R.S.F Servicios Informáticos</p>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/543878541341" class="whatsapp-float" target="_blank">🟢</a>
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/543878541341" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
