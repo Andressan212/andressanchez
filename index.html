@@ -217,19 +217,22 @@ to{transform:translateY(0);opacity:1;}
 
 /* WhatsApp */
 .whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:26px;
-padding:16px;
-border-radius:50%;
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-z-index:999;
-transition:.3s;
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  background:#25D366;
+  color:white;
+  font-size:20px;       /* icono más chico */
+  padding:12px;         /* botón más chico */
+  border-radius:50%;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  z-index:999;
+  transition:.3s ease;
 }
-.whatsapp-float:hover{transform:scale(1.1);}
+
+.whatsapp-float:hover{
+  transform:scale(1.08);
+}
 
 /* Footer */
 footer{
@@ -239,7 +242,14 @@ text-align:center;
 padding:30px;
 font-size:.9rem;
 }
-
+ @media(max-width:768px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+    font-size:18px;
+    padding:10px;
+  }
+}
 /* Dark mode */
 body.dark{
 background:#020617;
@@ -279,13 +289,38 @@ body.dark #contacto{background:#020617;}
 </section>
 
 <section id="sistemas" class="container my-5" data-aos="fade-right">
-<h2>Sistemas</h2>
-<div class="row g-4">
-<div class="col-md-6"><div class="card-custom"><h4>Sistema de Ventas</h4><p>Gestión de productos, clientes y ventas</p></div></div>
-<div class="col-md-6"><div class="card-custom"><h4>Sistema de Personal</h4><p>Registro de empleados y control interno</p></div></div>
-</div>
-</section>
+  <h2>Sistemas Desarrollados</h2>
 
+  <div class="row g-4">
+
+    <!-- Sistema 1 -->
+    <div class="col-md-6">
+      <div class="card-custom system-card">
+        <div class="system-img">
+          <img src="img/img2.png" alt="Sistema de Gestión de Ventas" loading="lazy">
+        </div>
+        <div class="system-content">
+          <h4>Sistema de Gestión de Ventas</h4>
+          <p>Gestión de productos, clientes y ventas. Desarrollado en Visual Basic y MySQL.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sistema 2 -->
+    <div class="col-md-6">
+      <div class="card-custom system-card">
+        <div class="system-img">
+          <img src="img/img1.png" alt="Sistema de Registro de Empleados" loading="lazy">
+        </div>
+        <div class="system-content">
+          <h4>Registro de Empleados</h4>
+          <p>Registro de personal con base de datos. Desarrollado con PHP y MySQL.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 <section id="servicios" class="container my-5" data-aos="fade-left">
 <h2>Servicios</h2>
 <div class="row g-4">
